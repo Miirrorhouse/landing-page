@@ -7421,6 +7421,668 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "vZgE0",
+      "x": 7000,
+      "y": -2000,
+      "name": "Email Capture Components",
+      "fill": "#E4DDD6",
+      "layout": "vertical",
+      "gap": 56,
+      "padding": 56,
+      "children": [
+        {
+          "type": "text",
+          "id": "IWYWf",
+          "fill": "#999999",
+          "content": "EMAIL CAPTURE — 3 VARIANTS",
+          "fontFamily": "Host Grotesk",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "letterSpacing": 2.5
+        },
+        {
+          "type": "text",
+          "id": "Hdjus",
+          "fill": "#BBBBBB",
+          "content": "01 — PAGE SECTION (DESKTOP)",
+          "fontFamily": "Host Grotesk",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "letterSpacing": 1.5
+        },
+        {
+          "type": "frame",
+          "id": "yMgRX",
+          "name": "Section Variant",
+          "width": 1440,
+          "height": 288,
+          "fill": "#1C1C1C",
+          "cornerRadius": 16,
+          "padding": [
+            0,
+            96
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "1LYJc",
+              "name": "secL",
+              "width": 520,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EPWPS",
+                  "fill": "#FF961E",
+                  "content": "DON'T MISS A SEAT",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.5
+                },
+                {
+                  "type": "text",
+                  "id": "1PqJ2",
+                  "fill": "#FFFCF9",
+                  "content": "Be the first to know about upcoming Nonna classes.",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Source Serif Pro",
+                  "fontSize": 38,
+                  "fontWeight": "normal",
+                  "letterSpacing": -1.5
+                },
+                {
+                  "type": "text",
+                  "id": "cOJYB",
+                  "fill": "#727272",
+                  "content": "New classes announced to our list first. No spam, ever.",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "300"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kVmgm",
+              "name": "secR",
+              "width": 440,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "p9KR2",
+                  "name": "emailRow",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "S3Irf",
+                      "name": "emailInput",
+                      "width": "fill_container",
+                      "height": 52,
+                      "fill": "#2C2C2C",
+                      "cornerRadius": 100,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#444444"
+                      },
+                      "padding": [
+                        0,
+                        24
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xfoVw",
+                          "fill": "#555555",
+                          "content": "Enter your email address",
+                          "fontFamily": "Host Grotesk",
+                          "fontSize": 14,
+                          "fontWeight": "300"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jxWC3",
+                      "name": "emailBtn",
+                      "height": 52,
+                      "fill": "#FF961E",
+                      "cornerRadius": 100,
+                      "padding": [
+                        0,
+                        28
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "71UYE",
+                          "fill": "#1C1C1C",
+                          "content": "NOTIFY ME",
+                          "fontFamily": "Host Grotesk",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "1yPyA",
+                  "fill": "#555555",
+                  "content": "No spam. Unsubscribe at any time.",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 12,
+                  "fontWeight": "300"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Tz1t2",
+          "fill": "#BBBBBB",
+          "content": "02 — POPUP MODAL",
+          "fontFamily": "Host Grotesk",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "letterSpacing": 1.5
+        },
+        {
+          "type": "frame",
+          "id": "m1c5V",
+          "name": "Popup Variant",
+          "width": 580,
+          "fill": "#FFFCF9",
+          "cornerRadius": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "5yKRa",
+              "name": "PopupImage",
+              "width": 220,
+              "height": 480,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1773596441897.png",
+                "mode": "fill"
+              },
+              "cornerRadius": [
+                20,
+                0,
+                0,
+                20
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yn7vp",
+              "name": "popForm",
+              "width": 360,
+              "fill": "#FFFCF9",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                36,
+                32
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eikXJ",
+                  "name": "popClose",
+                  "width": "fill_container",
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zim4g",
+                      "fill": "#AAAAAA",
+                      "content": "✕",
+                      "fontFamily": "Host Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "iwTLT",
+                  "fill": "#FF961E",
+                  "content": "DON'T MISS A SEAT",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.5
+                },
+                {
+                  "type": "text",
+                  "id": "78e1K",
+                  "fill": "#1C1C1C",
+                  "content": "Join the Nonna Cooking list",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Source Serif Pro",
+                  "fontSize": 28,
+                  "fontWeight": "normal",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "f6Ees",
+                  "fill": "#727272",
+                  "content": "Be the first to know when new classes open. Subscribers get early access and special pricing.",
+                  "lineHeight": 1.65,
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "line",
+                  "id": "mSTHq",
+                  "width": "fill_container",
+                  "height": 0,
+                  "stroke": {
+                    "align": "center",
+                    "thickness": 1,
+                    "fill": "#E8DDD3"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "6LkyS",
+                  "name": "popInput",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "#F6EDE3",
+                  "cornerRadius": 100,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E0D0BE"
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CgsFJ",
+                      "fill": "#AAAAAA",
+                      "content": "your@email.com",
+                      "fontFamily": "Host Grotesk",
+                      "fontSize": 14,
+                      "fontWeight": "300"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LtbnH",
+                  "name": "popBtn",
+                  "width": "fill_container",
+                  "fill": "#FF961E",
+                  "cornerRadius": 100,
+                  "padding": [
+                    14,
+                    0
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "I9rkg",
+                      "fill": "#1C1C1C",
+                      "content": "JOIN THE LIST",
+                      "fontFamily": "Host Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "2VafB",
+                  "fill": "#AAAAAA",
+                  "content": "No spam. Unsubscribe any time.",
+                  "textAlign": "center",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 11,
+                  "fontWeight": "300"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Sxtf1",
+          "fill": "#BBBBBB",
+          "content": "02 — POPUP MODAL",
+          "fontFamily": "Host Grotesk",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "letterSpacing": 1.5
+        },
+        {
+          "type": "frame",
+          "id": "MFgAp",
+          "name": "Popup Variant",
+          "width": 580,
+          "fill": "#FFFCF9",
+          "cornerRadius": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "1lZQx",
+              "name": "PopupImage",
+              "width": 220,
+              "height": 480,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1773596472954.png",
+                "mode": "fill"
+              },
+              "cornerRadius": [
+                20,
+                0,
+                0,
+                20
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aPuTg",
+              "name": "popForm",
+              "width": 360,
+              "fill": "#FFFCF9",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                36,
+                32
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "QcAyp",
+                  "name": "popClose",
+                  "width": "fill_container",
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Hh95X",
+                      "fill": "#AAAAAA",
+                      "content": "✕",
+                      "fontFamily": "Host Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "87zRx",
+                  "fill": "#FF961E",
+                  "content": "DON'T MISS A SEAT",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.5
+                },
+                {
+                  "type": "text",
+                  "id": "RQybl",
+                  "fill": "#1C1C1C",
+                  "content": "Join the Nonna Cooking list",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Source Serif Pro",
+                  "fontSize": 28,
+                  "fontWeight": "normal",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "gAPLS",
+                  "fill": "#727272",
+                  "content": "Be the first to know when new classes open. Subscribers get early access and special pricing.",
+                  "lineHeight": 1.65,
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "line",
+                  "id": "O2YPD",
+                  "width": "fill_container",
+                  "height": 0,
+                  "stroke": {
+                    "align": "center",
+                    "thickness": 1,
+                    "fill": "#E8DDD3"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "d3oAH",
+                  "name": "popInput",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "#F6EDE3",
+                  "cornerRadius": 100,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E0D0BE"
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uGAoi",
+                      "fill": "#AAAAAA",
+                      "content": "your@email.com",
+                      "fontFamily": "Host Grotesk",
+                      "fontSize": 14,
+                      "fontWeight": "300"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rcKG1",
+                  "name": "popBtn",
+                  "width": "fill_container",
+                  "fill": "#FF961E",
+                  "cornerRadius": 100,
+                  "padding": [
+                    14,
+                    0
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "boKH5",
+                      "fill": "#1C1C1C",
+                      "content": "JOIN THE LIST",
+                      "fontFamily": "Host Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "JVIG4",
+                  "fill": "#AAAAAA",
+                  "content": "No spam. Unsubscribe any time.",
+                  "textAlign": "center",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 11,
+                  "fontWeight": "300"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "NMGWp",
+          "fill": "#BBBBBB",
+          "content": "03 — MOBILE INLINE SECTION",
+          "fontFamily": "Host Grotesk",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "letterSpacing": 1.5
+        },
+        {
+          "type": "frame",
+          "id": "YC71c",
+          "name": "Mobile Variant",
+          "width": 390,
+          "fill": "#1C1C1C",
+          "cornerRadius": 16,
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            52,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "6Ad9W",
+              "fill": "#FF961E",
+              "content": "DON'T MISS A SEAT",
+              "textAlign": "center",
+              "fontFamily": "Host Grotesk",
+              "fontSize": 10,
+              "fontWeight": "700",
+              "letterSpacing": 2.5
+            },
+            {
+              "type": "text",
+              "id": "bGcAQ",
+              "fill": "#FFFCF9",
+              "content": "Join the Nonna Cooking list",
+              "lineHeight": 1.05,
+              "textAlign": "center",
+              "fontFamily": "Source Serif Pro",
+              "fontSize": 32,
+              "fontWeight": "normal",
+              "letterSpacing": -1.2
+            },
+            {
+              "type": "text",
+              "id": "u1iGE",
+              "fill": "#727272",
+              "content": "Be the first to know when new classes open. Early access for subscribers.",
+              "lineHeight": 1.65,
+              "textAlign": "center",
+              "fontFamily": "Host Grotesk",
+              "fontSize": 14,
+              "fontWeight": "300"
+            },
+            {
+              "type": "frame",
+              "id": "Rl6YI",
+              "name": "mobIn",
+              "width": "fill_container",
+              "height": 52,
+              "fill": "#2C2C2C",
+              "cornerRadius": 100,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#444444"
+              },
+              "padding": [
+                0,
+                22
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eSAfi",
+                  "fill": "#555555",
+                  "content": "Enter your email address",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "300"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MIzqq",
+              "name": "mobSubBtn",
+              "width": "fill_container",
+              "fill": "#FF961E",
+              "cornerRadius": 100,
+              "padding": [
+                14,
+                0
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AvnAQ",
+                  "fill": "#1C1C1C",
+                  "content": "NOTIFY ME",
+                  "fontFamily": "Host Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "w0DWK",
+              "fill": "#555555",
+              "content": "No spam. Unsubscribe any time.",
+              "textAlign": "center",
+              "fontFamily": "Host Grotesk",
+              "fontSize": 11,
+              "fontWeight": "300"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -103,6 +103,37 @@ body {
   box-shadow: 0 4px 16px rgba(255, 150, 30, 0.35);
 }
 
+.btn-blue {
+  background-color: #3163F3;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 8px 32px;
+  border: 2px solid #3163F3;
+  border-radius: 100px;
+  box-shadow: none;
+  transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-blue:hover {
+  background-color: transparent;
+  color: #3163F3;
+  box-shadow: none;
+}
+
+.btn-blue .btn-arrow-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-blue:hover .btn-arrow-icon {
+  transform: translateX(6px);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(93%) saturate(1739%) hue-rotate(218deg) brightness(97%) contrast(93%);
+}
+
 .btn-dark {
   background-color: var(--black);
   color: var(--tularosa);
@@ -129,21 +160,19 @@ body {
   justify-content: center;
   font-family: 'Host Grotesk', sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.3px;
   text-decoration: none;
-  padding: 11px 22px;
-  border-radius: 12px;
+  padding: 8px 32px;
+  border-radius: 100px;
   background-color: var(--black);
   color: var(--tularosa);
-  box-shadow: 0 1px 3px rgba(28, 28, 28, 0.12);
-  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: none;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .btn-header-cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(28, 28, 28, 0.2);
 }
 
 /* ===========================
@@ -208,8 +237,7 @@ body {
 }
 
 .hero-content {
-  width: 640px;
-  flex-shrink: 0;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -265,7 +293,7 @@ body {
 }
 
 .hero-image {
-  flex: 1;
+  width: 50%;
   overflow: hidden;
 }
 
@@ -315,11 +343,14 @@ body {
   color: var(--orange);
 }
 
-/* ===========================
-   Mobile Info Bar
-   =========================== */
-.mobile-info-bar {
+/* Hide marquee duplicates on desktop */
+.marquee-dup {
   display: none;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* ===========================
@@ -387,8 +418,7 @@ body {
 }
 
 .dish-image {
-  width: 680px;
-  flex-shrink: 0;
+  width: 50%;
   overflow: hidden;
 }
 
@@ -399,8 +429,8 @@ body {
 }
 
 .dish-content {
-  flex: 1;
-  padding: 72px;
+  width: 50%;
+  padding: 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -427,22 +457,36 @@ body {
   max-width: 520px;
 }
 
+.ingredients-label {
+  margin-bottom: -20px;
+}
+
 .ingredient-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
 }
 
-.ingredient-pill {
+.ingredient-card {
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
-  border: 1px solid var(--black);
+  gap: 12px;
+  padding: 4px 20px;
+  border: none;
   border-radius: 100px;
+  background-color: var(--creme);
+}
+
+.ingredient-icon {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.ingredient-card span {
   font-family: 'Host Grotesk', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 1.5px;
   color: var(--black);
 }
 
@@ -549,15 +593,14 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
-  height: 660px;
 }
 
 .nonna-content {
-  width: 680px;
-  flex-shrink: 0;
+  width: 50%;
   padding: 80px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 28px;
   justify-content: center;
   background-color: var(--tularosa);
@@ -607,11 +650,15 @@ body {
 }
 
 .nonna-image {
-  flex: 1;
+  width: 50%;
   overflow: hidden;
+  position: relative;
 }
 
 .nonna-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -878,7 +925,17 @@ body {
   }
 
   .hero-image {
+    width: 100%;
     height: 400px;
+  }
+
+  .nonna-image {
+    width: 100%;
+    position: static;
+  }
+
+  .nonna-image img {
+    position: static;
   }
 
   .info-bar {
@@ -917,6 +974,7 @@ body {
   }
 
   .dish-content {
+    width: 100%;
     padding: 40px;
   }
 
@@ -1044,28 +1102,48 @@ body {
   }
 
   .hero-image {
+    width: 100%;
     height: 300px;
     order: -1;
   }
 
-  /* Hide desktop info bar, show mobile version */
   .info-bar {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-    gap: 10px;
+    overflow: hidden;
+    padding: 0;
+    height: 48px;
   }
 
-  .info-star {
-    display: none;
+  .info-bar-inner {
+    justify-content: flex-start;
+    gap: 16px;
+    white-space: nowrap;
+    animation: marquee-scroll 18s linear infinite;
+    max-width: none;
+    width: max-content;
+    padding: 0 8px;
+  }
+
+  .marquee-dup {
+    display: inline;
   }
 
   .info-item {
     font-size: 13px;
+    flex-shrink: 0;
   }
 
   .info-item-serif {
     font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .info-star {
+    flex-shrink: 0;
+  }
+
+  .info-bar-inner > * {
+    opacity: 1;
+    animation: none;
   }
 
   .class-details {
@@ -1107,6 +1185,7 @@ body {
   }
 
   .dish-content {
+    width: 100%;
     padding: 40px 20px;
     gap: 20px;
   }
@@ -1121,10 +1200,17 @@ body {
     max-width: 100%;
   }
 
-  .ingredient-pill {
-    font-size: 11px;
-    padding: 8px 14px;
-    letter-spacing: 1.2px;
+  .ingredient-icon {
+    height: 36px;
+  }
+
+  .ingredient-card span {
+    font-size: 14px;
+  }
+
+  .ingredient-card {
+    padding: 8px 18px 8px 8px;
+    gap: 10px;
   }
 
   .dish-content .btn-pill {
