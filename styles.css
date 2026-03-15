@@ -70,8 +70,11 @@ body {
   border-radius: 14px;
   cursor: pointer;
   border: none;
-  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .btn-pill:hover {
@@ -152,6 +155,39 @@ body {
 
 .btn-large .btn-arrow {
   font-size: 18px;
+}
+
+.btn-reserve {
+  background-color: var(--black);
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 12px 40px;
+  border-radius: 100px;
+  border: 2px solid var(--black);
+  box-shadow: none;
+  transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-reserve .btn-arrow-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-reserve:hover {
+  background-color: #FFFFFF;
+  color: var(--black);
+  border-color: #FFFFFF;
+}
+
+.btn-reserve:hover .btn-arrow-icon {
+  transform: translateX(6px);
+  filter: brightness(0);
 }
 
 .btn-header-cta {
@@ -434,9 +470,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 28px;
+  gap: 0;
   justify-content: center;
   background-color: var(--tularosa);
+}
+
+.dish-content .badge {
+  margin-bottom: 28px;
+}
+
+.dish-content .dish-title {
+  margin-bottom: 28px;
+}
+
+.dish-content .dish-desc {
+  margin-bottom: 28px;
 }
 
 .dish-title {
@@ -458,13 +506,14 @@ body {
 }
 
 .ingredients-label {
-  margin-bottom: -20px;
+  margin-bottom: 8px;
 }
 
 .ingredient-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-bottom: 28px;
 }
 
 .ingredient-card {
@@ -474,7 +523,7 @@ body {
   padding: 4px 20px;
   border: none;
   border-radius: 100px;
-  background-color: var(--creme);
+  background-color: #F7F1EA;
 }
 
 .ingredient-icon {
@@ -1187,7 +1236,20 @@ body {
   .dish-content {
     width: 100%;
     padding: 40px 20px;
-    gap: 20px;
+  }
+
+  .dish-content .badge,
+  .dish-content .dish-title,
+  .dish-content .dish-desc {
+    margin-bottom: 20px;
+  }
+
+  .ingredient-tags {
+    margin-bottom: 20px;
+  }
+
+  .ingredients-label {
+    margin-bottom: 8px;
   }
 
   .dish-title {
