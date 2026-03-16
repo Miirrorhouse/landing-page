@@ -331,12 +331,14 @@ body {
 .hero-image {
   width: 50%;
   overflow: hidden;
+  padding: 20px;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 /* ===========================
@@ -456,12 +458,14 @@ body {
 .dish-image {
   width: 50%;
   overflow: hidden;
+  padding: 20px;
 }
 
 .dish-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .dish-content {
@@ -702,14 +706,16 @@ body {
   width: 50%;
   overflow: hidden;
   position: relative;
+  padding: 20px;
 }
 
 .nonna-image img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border-radius: 12px;
   object-fit: cover;
 }
 
@@ -976,15 +982,24 @@ body {
   .hero-image {
     width: 100%;
     height: 400px;
+    padding: 0;
+  }
+
+  .hero-image img {
+    border-radius: 0;
   }
 
   .nonna-image {
     width: 100%;
     position: static;
+    padding: 0;
   }
 
   .nonna-image img {
     position: static;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 
   .info-bar {
@@ -1020,6 +1035,11 @@ body {
   .dish-image {
     width: 100%;
     height: 360px;
+    padding: 0;
+  }
+
+  .dish-image img {
+    border-radius: 0;
   }
 
   .dish-content {
