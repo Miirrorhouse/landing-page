@@ -15,8 +15,8 @@
     {
       "type": "frame",
       "id": "tTpaD",
-      "x": 1473,
-      "y": -2248,
+      "x": 1505,
+      "y": -2143,
       "name": "Frame 2147218278",
       "clip": true,
       "width": 1440,
@@ -4041,7 +4041,8 @@
                           "fill": "#1C1C1C",
                           "content": "→",
                           "fontFamily": "Host Grotesk",
-                          "fontSize": 16
+                          "fontSize": 16,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -4643,7 +4644,8 @@
                       "fill": "#1C1C1C",
                       "content": "→",
                       "fontFamily": "Host Grotesk",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -5085,7 +5087,8 @@
                       "fill": "#1C1C1C",
                       "content": "→",
                       "fontFamily": "Host Grotesk",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -5219,7 +5222,8 @@
                   "fill": "#FFFCF9",
                   "content": "→",
                   "fontFamily": "Host Grotesk",
-                  "fontSize": 18
+                  "fontSize": 18,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -5721,8 +5725,8 @@
     {
       "type": "frame",
       "id": "Z2sAg",
-      "x": 5042,
-      "y": -2135,
+      "x": 5038,
+      "y": -2177,
       "name": "Nonna Mobile V2",
       "clip": true,
       "width": 390,
