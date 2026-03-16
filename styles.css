@@ -867,6 +867,68 @@ body {
 }
 
 /* ===========================
+   Waitlist
+   =========================== */
+.waitlist {
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  background-color: var(--creme);
+}
+
+.waitlist-desc {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--black);
+  max-width: 480px;
+}
+
+.waitlist-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.waitlist-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 20px;
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 15px;
+  border: 1.5px solid var(--black);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--black);
+  outline: none;
+}
+
+.waitlist-input::placeholder {
+  color: var(--light-grey);
+}
+
+.waitlist-input:focus {
+  border-color: var(--orange);
+}
+
+.waitlist-btn {
+  white-space: nowrap;
+}
+
+.waitlist-success {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* ===========================
    Footer
    =========================== */
 .footer {

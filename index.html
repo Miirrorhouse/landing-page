@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-ancestors 'none';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://script.google.com; frame-ancestors 'none';" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K43JZQSH4H"></script>
@@ -386,6 +386,39 @@
       </div>
     </div>
   </section>
+
+  <div class="divider"></div>
+
+  <!-- Waitlist -->
+  <section class="waitlist" id="waitlist" data-stagger>
+    <p class="reserve-eyebrow">STAY IN THE LOOP</p>
+    <h2 class="reserve-title">Not Ready Yet?</h2>
+    <p class="waitlist-desc">Join the waitlist and we'll let you know about future classes with Nonna Margherita.</p>
+    <form id="waitlist-form" class="waitlist-form">
+      <input type="email" id="waitlist-email" placeholder="Enter your email" required class="waitlist-input" />
+      <button type="submit" class="btn-pill btn-blue waitlist-btn">Join the Waitlist <img src="assets/Arrow_Right_MD.svg" alt="" class="btn-arrow-icon" /></button>
+    </form>
+    <p class="reserve-note">No spam. Unsubscribe anytime.</p>
+  </section>
+
+  <script>
+    document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var email = document.getElementById('waitlist-email').value;
+      try {
+        await fetch('https://script.google.com/macros/s/AKfycbwQ4jc2N4f5DltkTX0Ub_EXSEwZK6oqeTo0BIBSagxd2kJwFYFW4h0u2nF-fkYO6AQf/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        });
+        document.getElementById('waitlist-form').outerHTML =
+          '<p class="waitlist-success">You\'re on the list! We\'ll be in touch.</p>';
+      } catch (err) {
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
 
   <div class="divider"></div>
 
