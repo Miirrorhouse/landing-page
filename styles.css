@@ -922,10 +922,14 @@ body {
 }
 
 .waitlist-success {
-  font-family: 'Host Grotesk', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
+  font-family: 'Source Serif 4', serif;
+  font-size: 26px;
+  font-weight: 400;
+  font-style: italic;
   color: var(--black);
+  border: 1.5px solid var(--black);
+  border-radius: 100px;
+  padding: 18px 36px;
 }
 
 /* ===========================

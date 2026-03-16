@@ -276,7 +276,7 @@
       </div>
       <div class="hiw-card">
         <div class="hiw-card-img">
-          <img src="images/step2.jpg" alt="Pasta Gricia ingredients laid out and ready to cook" loading="lazy" width="800" height="457" />
+          <img src="images/Get Ready to Cook.jpeg" alt="Pasta Gricia ingredients laid out and ready to cook" loading="lazy" width="800" height="457" />
         </div>
         <div class="hiw-card-body">
           <span class="hiw-num">02</span>
@@ -286,7 +286,7 @@
       </div>
       <div class="hiw-card">
         <div class="hiw-card-img">
-          <img src="images/step3.jpg" alt="Cooking Pasta Gricia step by step with Nonna Margherita on a live video call" loading="lazy" width="800" height="457" />
+          <img src="images/Cook with Nonna.jpeg" alt="Cooking Pasta Gricia step by step with Nonna Margherita on a live video call" loading="lazy" width="800" height="457" />
         </div>
         <div class="hiw-card-body">
           <span class="hiw-num">03</span>
@@ -327,6 +327,34 @@
     <a href="https://buy.stripe.com/9B628s2xT8Xo2ey9jkgfu00" target="_blank" class="btn-pill btn-reserve">Reserve Your Seat Now <img src="assets/Arrow_Right_MD.svg" alt="" class="btn-arrow-icon" /></a>
     <p class="reserve-note">Limited spots available &nbsp;·&nbsp; Secure checkout</p>
   </section>
+
+  <div class="divider"></div>
+
+  <!-- Waitlist -->
+  <section class="waitlist" id="waitlist" data-stagger>
+    <p class="reserve-eyebrow">STAY IN THE LOOP</p>
+    <h2 class="reserve-title">Can't make this one?</h2>
+    <p class="waitlist-desc">Leave your email and we'll invite you to the next time a Nonna opens her kitchen.</p>
+    <form id="waitlist-form" class="waitlist-form">
+      <input type="email" id="waitlist-email" placeholder="Enter your email" required class="waitlist-input" />
+      <button type="submit" class="btn-pill btn-blue waitlist-btn">Join the Waitlist <img src="assets/Arrow_Right_MD.svg" alt="" class="btn-arrow-icon" /></button>
+    </form>
+    <p class="reserve-note">No spam. Unsubscribe anytime.</p>
+  </section>
+
+  <script>
+    document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var email = document.getElementById('waitlist-email').value;
+      fetch('https://script.google.com/macros/s/AKfycbwQ4jc2N4f5DltkTX0Ub_EXSEwZK6oqeTo0BIBSagxd2kJwFYFW4h0u2nF-fkYO6AQf/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify({ email: email })
+      });
+      document.getElementById('waitlist-form').outerHTML =
+        '<p class="waitlist-success">You\'re on the list! We\'ll be in touch.</p>';
+    });
+  </script>
 
   <div class="divider"></div>
 
@@ -386,39 +414,6 @@
       </div>
     </div>
   </section>
-
-  <div class="divider"></div>
-
-  <!-- Waitlist -->
-  <section class="waitlist" id="waitlist" data-stagger>
-    <p class="reserve-eyebrow">STAY IN THE LOOP</p>
-    <h2 class="reserve-title">Not Ready Yet?</h2>
-    <p class="waitlist-desc">Join the waitlist and we'll let you know about future classes with Nonna Margherita.</p>
-    <form id="waitlist-form" class="waitlist-form">
-      <input type="email" id="waitlist-email" placeholder="Enter your email" required class="waitlist-input" />
-      <button type="submit" class="btn-pill btn-blue waitlist-btn">Join the Waitlist <img src="assets/Arrow_Right_MD.svg" alt="" class="btn-arrow-icon" /></button>
-    </form>
-    <p class="reserve-note">No spam. Unsubscribe anytime.</p>
-  </section>
-
-  <script>
-    document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      var email = document.getElementById('waitlist-email').value;
-      try {
-        await fetch('https://script.google.com/macros/s/AKfycbwQ4jc2N4f5DltkTX0Ub_EXSEwZK6oqeTo0BIBSagxd2kJwFYFW4h0u2nF-fkYO6AQf/exec', {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email })
-        });
-        document.getElementById('waitlist-form').outerHTML =
-          '<p class="waitlist-success">You\'re on the list! We\'ll be in touch.</p>';
-      } catch (err) {
-        alert('Something went wrong. Please try again.');
-      }
-    });
-  </script>
 
   <div class="divider"></div>
 
