@@ -1,20 +1,32 @@
 // FAQ accordion
-document.querySelectorAll('[data-faq]').forEach(item => {
+function toggleFaq(item) {
   const question = item.querySelector('.faq-question');
   const answer = item.querySelector('.faq-answer');
+  const isActive = item.classList.contains('active');
 
-  question.addEventListener('click', () => {
-    const isActive = item.classList.contains('active');
+  document.querySelectorAll('[data-faq]').forEach(i => {
+    i.classList.remove('active');
+    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    const a = i.querySelector('.faq-answer');
+    if (a) a.style.maxHeight = null;
+  });
 
-    document.querySelectorAll('[data-faq]').forEach(i => {
-      i.classList.remove('active');
-      const a = i.querySelector('.faq-answer');
-      if (a) a.style.maxHeight = null;
-    });
+  if (!isActive) {
+    item.classList.add('active');
+    question.setAttribute('aria-expanded', 'true');
+    if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
 
-    if (!isActive) {
-      item.classList.add('active');
-      if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+document.querySelectorAll('[data-faq]').forEach(item => {
+  const question = item.querySelector('.faq-question');
+
+  question.addEventListener('click', () => toggleFaq(item));
+
+  question.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleFaq(item);
     }
   });
 });

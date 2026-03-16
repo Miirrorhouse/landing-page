@@ -3,10 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; frame-ancestors 'none';" />
   <title>Cook Pasta Gricia Live with Nonna Patrizia</title>
+  <meta name="description" content="Join Nonna Patrizia for a live online cooking class on April 19th. Learn to make authentic Pasta Gricia from Palombara Sabina, Italy. Limited spots — $39." />
+  <link rel="canonical" href="https://www.cookwithanana.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cook Pasta Gricia Live with Nonna Patrizia" />
+  <meta property="og:description" content="An intimate live cooking class from Palombara Sabina, Italy. Learn to make authentic Pasta Gricia alongside a real Italian Nonna. April 19th — $39." />
+  <meta property="og:image" content="https://www.cookwithanana.com/images/hero.jpg" />
+  <meta property="og:url" content="https://www.cookwithanana.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cook Pasta Gricia Live with Nonna Patrizia" />
+  <meta name="twitter:description" content="Live online cooking class from Italy. Learn authentic Pasta Gricia with Nonna Patrizia. April 19th — $39." />
+  <meta name="twitter:image" content="https://www.cookwithanana.com/images/hero.jpg" />
+
+  <!-- Structured Data: Event -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Cook Pasta Gricia with Nonna Patrizia",
+    "description": "An intimate live online cooking class from Palombara Sabina, Italy. Learn to make authentic Pasta Gricia alongside Nonna Patrizia.",
+    "startDate": "2025-04-19T13:00:00-05:00",
+    "endDate": "2025-04-19T14:00:00-05:00",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://www.cookwithanana.com/"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Anana",
+      "url": "https://www.cookwithanana.com"
+    },
+    "performer": {
+      "@type": "Person",
+      "name": "Nonna Patrizia"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "39",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": "https://www.cookwithanana.com/#reserve"
+    },
+    "image": "https://www.cookwithanana.com/images/hero.jpg"
+  }
+  </script>
+
+  <!-- Structured Data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do I need to participate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You'll need a kitchen, a stove, and the ingredients we'll email you one week before the class. A laptop or tablet to follow along is recommended."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I receive the recipe ahead of time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! One week before the class, we'll send you the full ingredient list and any prep instructions so you're ready to cook."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the class recorded if I miss it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, a recording will be available for 7 days after the live class so you can revisit any steps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the refund window?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can request a full refund up to 48 hours before the class starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cook with my family or kids?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! This class is designed for all ages and skill levels. Cooking together is what Nonna loves most."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Host+Grotesk:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/hero.jpg" />
   <link rel="icon" type="image/jpeg" href="assets/Favicon.jpg" />
   <link rel="apple-touch-icon" href="assets/WebClip.jpg" />
   <link rel="stylesheet" href="styles.css" />
@@ -27,6 +130,8 @@
     </div>
   </header>
 
+  <main>
+
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
@@ -39,7 +144,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="images/hero.jpg" alt="Nonna Patrizia with pasta" />
+      <img src="images/hero.jpg" alt="Nonna Patrizia preparing fresh pasta in her kitchen in Palombara Sabina, Italy" width="933" height="1400" />
     </div>
   </section>
 
@@ -106,12 +211,10 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- The Dish -->
   <section class="the-dish" id="the-dish">
     <div class="dish-image" data-reveal="scale">
-      <img src="images/dish.jpg" alt="Pasta Gricia" loading="lazy" />
+      <img src="images/dish.jpg" alt="A plate of authentic Pasta Gricia with guanciale, pecorino, and black pepper" loading="lazy" width="1400" height="933" />
     </div>
     <div class="dish-content" data-stagger>
       <div class="badge">THE DISH</div>
@@ -147,7 +250,7 @@
     <div class="hiw-cards" data-stagger>
       <div class="hiw-card">
         <div class="hiw-card-img">
-          <img src="images/step1.jpg" alt="Step 1" loading="lazy" />
+          <img src="images/step1.jpg" alt="Reserving a spot for an online cooking class on a laptop" loading="lazy" width="800" height="457" />
         </div>
         <div class="hiw-card-body">
           <span class="hiw-num">01</span>
@@ -157,7 +260,7 @@
       </div>
       <div class="hiw-card">
         <div class="hiw-card-img">
-          <img src="images/step2.jpg" alt="Step 2" loading="lazy" />
+          <img src="images/step2.jpg" alt="Pasta Gricia ingredients laid out and ready to cook" loading="lazy" width="800" height="457" />
         </div>
         <div class="hiw-card-body">
           <span class="hiw-num">02</span>
@@ -167,7 +270,7 @@
       </div>
       <div class="hiw-card">
         <div class="hiw-card-img">
-          <img src="images/step3.jpg" alt="Step 3" loading="lazy" />
+          <img src="images/step3.jpg" alt="Cooking Pasta Gricia step by step with Nonna Patrizia on a live video call" loading="lazy" width="800" height="457" />
         </div>
         <div class="hiw-card-body">
           <span class="hiw-num">03</span>
@@ -193,7 +296,7 @@
       <a href="#reserve" class="btn-pill btn-blue">Cook with Nonna Patrizia <img src="assets/Arrow_Right_MD.svg" alt="" class="btn-arrow-icon" /></a>
     </div>
     <div class="nonna-image" data-reveal="scale">
-      <img src="images/nonna.jpg" alt="Nonna Patrizia" loading="lazy" />
+      <img src="images/nonna.jpg" alt="Nonna Patrizia cooking in her kitchen in Palombara Sabina, Italy" loading="lazy" width="933" height="1400" />
     </div>
   </section>
 
@@ -217,51 +320,51 @@
     <h2 class="faq-title" data-reveal>Hungry for more?</h2>
     <div class="faq-list" data-reveal>
       <div class="faq-item" data-faq>
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
           <span>What do I need to participate?</span>
-          <span class="faq-toggle">+</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-1">
           <p>You'll need a kitchen, a stove, and the ingredients we'll email you one week before the class. A laptop or tablet to follow along is recommended.</p>
         </div>
       </div>
       <div class="faq-sep"></div>
       <div class="faq-item" data-faq>
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
           <span>Will I receive the recipe ahead of time?</span>
-          <span class="faq-toggle">+</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-2">
           <p>Yes! One week before the class, we'll send you the full ingredient list and any prep instructions so you're ready to cook.</p>
         </div>
       </div>
       <div class="faq-sep"></div>
       <div class="faq-item" data-faq>
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
           <span>Is the class recorded if I miss it?</span>
-          <span class="faq-toggle">+</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-3">
           <p>Yes, a recording will be available for 7 days after the live class so you can revisit any steps.</p>
         </div>
       </div>
       <div class="faq-sep"></div>
       <div class="faq-item" data-faq>
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
           <span>How long is the refund window?</span>
-          <span class="faq-toggle">+</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-4">
           <p>You can request a full refund up to 48 hours before the class starts.</p>
         </div>
       </div>
       <div class="faq-sep"></div>
       <div class="faq-item" data-faq>
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-5">
           <span>Can I cook with my family or kids?</span>
-          <span class="faq-toggle">+</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-5">
           <p>Absolutely! This class is designed for all ages and skill levels. Cooking together is what Nonna loves most.</p>
         </div>
       </div>
@@ -269,6 +372,8 @@
   </section>
 
   <div class="divider"></div>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -294,8 +399,8 @@
     </div>
     <div class="footer-divider"></div>
     <div class="footer-bottom" data-reveal>
-      <p>© 2025 Nonna Cooking. All rights reserved.</p>
-      <p>Privacy Policy &nbsp;·&nbsp; Terms of Service</p>
+      <p>Copyright © 2026 Anana, All Rights Reserved</p>
+      <p><a href="https://www.cookwithanana.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &nbsp;·&nbsp; <a href="https://www.cookwithanana.com/tos" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></p>
     </div>
   </footer>
 
